@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/T3_TallerIntegracion/static/css/main.9482ce19.chunk.css",
+    "main.js": "/T3_TallerIntegracion/static/js/main.78954432.chunk.js",
+    "main.js.map": "/T3_TallerIntegracion/static/js/main.78954432.chunk.js.map",
+    "runtime-main.js": "/T3_TallerIntegracion/static/js/runtime-main.eb46979e.js",
+    "runtime-main.js.map": "/T3_TallerIntegracion/static/js/runtime-main.eb46979e.js.map",
+    "static/js/2.d9753fcb.chunk.js": "/T3_TallerIntegracion/static/js/2.d9753fcb.chunk.js",
+    "static/js/2.d9753fcb.chunk.js.map": "/T3_TallerIntegracion/static/js/2.d9753fcb.chunk.js.map",
+    "index.html": "/T3_TallerIntegracion/index.html",
+    "precache-manifest.1a1463f67a6257d2f239140c92abf4a1.js": "/T3_TallerIntegracion/precache-manifest.1a1463f67a6257d2f239140c92abf4a1.js",
+    "service-worker.js": "/T3_TallerIntegracion/service-worker.js",
+    "static/css/main.9482ce19.chunk.css.map": "/T3_TallerIntegracion/static/css/main.9482ce19.chunk.css.map",
+    "static/js/2.d9753fcb.chunk.js.LICENSE.txt": "/T3_TallerIntegracion/static/js/2.d9753fcb.chunk.js.LICENSE.txt",
+    "static/media/logo.svg": "/T3_TallerIntegracion/static/media/logo.5d5d9eef.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.eb46979e.js",
+    "static/js/2.d9753fcb.chunk.js",
+    "static/css/main.9482ce19.chunk.css",
+    "static/js/main.78954432.chunk.js"
+  ]
+}
