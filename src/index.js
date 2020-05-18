@@ -108,6 +108,20 @@ function nombre_empresa(ticker_, data_stocks){
   }
 
 };
+
+function pais(ticker_, data_stocks){
+  for (var key_1 in data_stocks){
+    for (var key_2 in data_stocks[key_1]){
+      if (data_stocks[key_1][key_2].ticker== ticker_){
+      return data_stocks[key_1][key_2].country;
+    }
+    }
+  }
+
+};
+
+
+
 //{exchanges(data_exchanges).map(home => <div>{home.name}</div>)}
 function exchanges(data_exchanges, nombre_mercado){
   for(var key in data_exchanges){
@@ -327,6 +341,7 @@ https://css-tricks.com/use-button-element/
                                       <h2> Nombre empresa: {nombre_empresa(key, data_stocks)} </h2>
                                       <h2> Acción: {key} </h2>
                                       <h2> Moneda: {moneda(key, data_stocks)} </h2>
+                                      <h2> Pais: {pais(key, data_stocks)} </h2>
                                       <h3> Volumen Total BUY: {buy_volume}</h3>
                                       <h3> Volumen Total SELL: {sell_volume}</h3>
                                       <h3> Volumen Total: {vol_total(grouped_data_buy, grouped_data_sell, key)}</h3>
@@ -393,6 +408,7 @@ https://css-tricks.com/use-button-element/
                                       <h2> Nombre empresa: {nombre_empresa(key, data_stocks)} </h2>
                                       <h2> Acción: {key} </h2>
                                       <h2> Moneda: {moneda(key, data_stocks)} </h2>
+                                      <h2> Pais: {pais(key, data_stocks)} </h2>
                                       <h3> Volumen Total BUY: {buy_volume}</h3>
                                       <h3> Volumen Total SELL: {sell_volume}</h3>
                                       <h3> Volumen Total: {vol_total(grouped_data_buy, grouped_data_sell, key)}</h3>
