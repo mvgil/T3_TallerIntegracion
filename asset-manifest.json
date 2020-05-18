@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/T3_TallerIntegracion/static/css/main.9482ce19.chunk.css",
-    "main.js": "/T3_TallerIntegracion/static/js/main.8e667ba2.chunk.js",
-    "main.js.map": "/T3_TallerIntegracion/static/js/main.8e667ba2.chunk.js.map",
+    "main.js": "/T3_TallerIntegracion/static/js/main.bebfc53d.chunk.js",
+    "main.js.map": "/T3_TallerIntegracion/static/js/main.bebfc53d.chunk.js.map",
     "runtime-main.js": "/T3_TallerIntegracion/static/js/runtime-main.eb46979e.js",
     "runtime-main.js.map": "/T3_TallerIntegracion/static/js/runtime-main.eb46979e.js.map",
     "static/js/2.ee7408f3.chunk.js": "/T3_TallerIntegracion/static/js/2.ee7408f3.chunk.js",
     "static/js/2.ee7408f3.chunk.js.map": "/T3_TallerIntegracion/static/js/2.ee7408f3.chunk.js.map",
     "index.html": "/T3_TallerIntegracion/index.html",
-    "precache-manifest.3a10203fd4ad9970be4e77111728517f.js": "/T3_TallerIntegracion/precache-manifest.3a10203fd4ad9970be4e77111728517f.js",
+    "precache-manifest.8543bac9d230feb9f77a81f06e68c80d.js": "/T3_TallerIntegracion/precache-manifest.8543bac9d230feb9f77a81f06e68c80d.js",
     "service-worker.js": "/T3_TallerIntegracion/service-worker.js",
     "static/css/main.9482ce19.chunk.css.map": "/T3_TallerIntegracion/static/css/main.9482ce19.chunk.css.map",
     "static/js/2.ee7408f3.chunk.js.LICENSE.txt": "/T3_TallerIntegracion/static/js/2.ee7408f3.chunk.js.LICENSE.txt",
@@ -18,6 +18,6 @@
     "static/js/runtime-main.eb46979e.js",
     "static/js/2.ee7408f3.chunk.js",
     "static/css/main.9482ce19.chunk.css",
-    "static/js/main.8e667ba2.chunk.js"
+    "static/js/main.bebfc53d.chunk.js"
   ]
 }
