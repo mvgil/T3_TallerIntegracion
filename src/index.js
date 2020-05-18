@@ -121,14 +121,55 @@ function exchanges(data_exchanges, nombre_mercado){
 
 
 
-function excha_numero(data_exchanges){
-  for (var key_0 in data_exchanges){
-    for (var key_2 in data_exchanges[key_0]){
-      exchanges(data_exchanges, data_exchanges[key_0][key_2].company_name);
+function obj_stock(data_stocks, company){
+  // retorna el objeto stock con ese ticker
+  for (var key in data_stocks){
+    for (var key_2 in data_stocks[key]){
+      if(data_stocks[key][key_2].company_name == company){
+        return data_stocks[key][key_2];
+      }
+
     }
   }
-
 }
+
+function volumen_compra_exchange(n_exchange, grouped_data_buy, data_exchanges, data_stocks){
+  const mercado = data_exchanges[n_exchange];
+  var buy = 0;
+  for(var company in  mercado.listed_companies){
+    var compañia = mercado.listed_companies[company] ;
+    console.log(compañia);
+    var stock = obj_stock(data_stocks, compañia);
+    console.log(stock);
+    var ticker = stock.ticker;
+    const data_buy = grouped_data_buy[ticker];
+
+    for(var key_buy in data_buy){
+      buy += data_buy[key_buy].volume;
+
+    }
+
+
+  }
+  return buy;
+
+};
+
+
+function volumen_venta_exchange(n_exchange){
+
+};
+
+function volumen_total(n_exchange){
+
+};
+
+function participacion_mercado(n_exchange){
+
+};
+
+
+
 // socket
 const socket = io("wss://le-18262636.bitzonte.com",{path: '/stocks'}, {transports: 'websocket'});
 //socket.disconnect();
@@ -162,7 +203,7 @@ https://css-tricks.com/use-button-element/
   useEffect(() => {
     socket.emit('EXCHANGES');
     socket.on('EXCHANGES', exchanges => {
-      setData_exchanges(currentData_exchanges => [...currentData_exchanges, exchanges]);
+      setData_exchanges(currentData_exchanges =>  exchanges);
     });
     socket.emit('STOCKS');
     socket.on('STOCKS', stocks => {
@@ -187,7 +228,8 @@ https://css-tricks.com/use-button-element/
 
 
   }, []);
-  console.log(data_stocks);
+  //console.log(data_stocks);
+  console.log(data_exchanges);
   /// cambiar
   function vol_transado_1(nombre_ticker){
     var grouped_data_buy = _.mapObject(_.groupBy(data_buy, 'ticker'),
@@ -307,8 +349,17 @@ https://css-tricks.com/use-button-element/
                               })}
 
           <h1> Exchanges  </h1>
-          {exchanges(data_exchanges, "")}
-          {excha_numero(data_exchanges)}
+
+          {Object.entries(data_exchanges).map(([key_1,value_1])=>{
+            return (<div>
+
+              <h2> {value_1.name} </h2>
+
+              <h3> Número de acciones: {value_1.listed_companies.length} </h3>
+              </div>);
+
+          })}
+
 
 
 
@@ -363,8 +414,16 @@ https://css-tricks.com/use-button-element/
                               })}
 
           <h1> Exchanges  </h1>
-          {exchanges(data_exchanges, "h")}
-          {excha_numero(data_exchanges)}
+          {Object.entries(data_exchanges).map(([key_1,value_1])=>{
+            return (<div>
+
+              <h2> {value_1.name} </h2>
+
+              <h3> Número de acciones: {value_1.listed_companies.length} </h3>
+              </div>);
+
+          })}
+
 
 
       </div>
